@@ -1,0 +1,35 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>ed760bbf-b98a-4c7c-aa05-b3b8f8e4adda</ProjectGuid>
+    <ProjectHome>.</ProjectHome>
+    <StartupFile>testPython.py</StartupFile>
+    <SearchPath>GUILib</SearchPath>
+    <WorkingDirectory>.</WorkingDirectory>
+    <OutputPath>.</OutputPath>
+    <Name>testPython</Name>
+    <RootNamespace>testPython</RootNamespace>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)' == 'Debug' ">
+    <DebugSymbols>true</DebugSymbols>
+    <EnableUnmanagedDebugging>false</EnableUnmanagedDebugging>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)' == 'Release' ">
+    <DebugSymbols>true</DebugSymbols>
+    <EnableUnmanagedDebugging>false</EnableUnmanagedDebugging>
+  </PropertyGroup>
+  <ItemGroup>
+    <Compile Include="GUILib\AbstractButton.py" />
+    <Compile Include="GUILib\Clickable.py" />
+    <Compile Include="GUILib\Frame.py" />
+    <Compile Include="GUILib\GUIObject.py" />
+    <Compile Include="GUILib\__init__.py" />
+    <Compile Include="testPython.py" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="GUILib\" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.Common.targets" />
+</Project>

@@ -22,9 +22,12 @@
   </PropertyGroup>
   <ItemGroup>
     <Compile Include="GUILib\AbstractButton.py" />
+    <Compile Include="GUILib\Application.py" />
+    <Compile Include="GUILib\CButton.py" />
     <Compile Include="GUILib\Clickable.py" />
     <Compile Include="GUILib\Frame.py" />
     <Compile Include="GUILib\GUIObject.py" />
+    <Compile Include="GUILib\RoundRect.py" />
     <Compile Include="GUILib\__init__.py" />
     <Compile Include="testPython.py" />
   </ItemGroup>

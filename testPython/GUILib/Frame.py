@@ -15,11 +15,11 @@ class Container(GUIObject.GUIObject):
 
     def Update(self):
         for Component in self.Components :
-            super(GUIObject.GUIObject,Component).Update()
-        return super(Container, self).Update()
-    def Draw(self):
+            self.Components[Component].Update()
+        return super(Container,self).Update()
+    def Draw(self,Win):
         for Component in self.Components:
-            super(GUIObject.GUIObject,Component).Draw()
+            self.Components[Component].Draw(Win)
         return super(Container,self).Draw()
 
 class Frame(GUIObject.GUIObject):
@@ -42,14 +42,18 @@ class Frame(GUIObject.GUIObject):
     def addComponent(self,comp):
         self.Cont.addComponent(comp)
         return
+    def setBackgroundColor(self,Color):
+        self.Background = Color
+        return
     def Update(self):
         self.EVEHandle()
         self.Cont.Update()
         return
-    def draw(self):
+    def Draw(self):
         self.Win.clear(self.Background)
-        self.Cont.Draw()
+        self.Cont.Draw(self.Win)
         self.Win.display()
+        return
 
 
 
